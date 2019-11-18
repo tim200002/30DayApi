@@ -13,7 +13,7 @@ const daily = require('./routes/daily');
 
 mongoose.connect('mongodb+srv://tim200002:30DayPassword@cluster0-jmtc0.mongodb.net/30DayChallenge?retryWrites=true&w=majority')
   .then(() => console.log('Connected to DB'))
-  .catch(err => console.error('Could not connect to DB'));
+  .catch(err => console.error(err));
 
 //Make sure env Variables are set
 if (!config.get('jwtPrivateKey')) {
